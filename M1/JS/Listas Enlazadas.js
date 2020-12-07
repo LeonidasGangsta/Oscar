@@ -18,7 +18,7 @@ class List {
         if (!this.head) {
             this.head = newNode;
         } else {
-            current = this.head;
+            let current = this.head;
             while (current.next) {
                 current = current.next;
             }
@@ -26,4 +26,109 @@ class List {
         }
         this.size++;
     }
+
+    insertAt (data, index) {
+        if (index < 0 || index > this.size) {
+            console.log('Estas ingresando un indice por fuera de la lista.')
+            return null;
+        };
+
+        const newNode = new Node(data);
+        let current = this.head;
+        let previous;
+
+        if (index === 0) {
+            newNode.next = current;
+            this.head = newNode;
+        } else {
+            for (let i = 0; i < index; i++) {
+                previous = current;
+                current = current.next;
+            };
+
+            newNode.next = current;
+            previous.next = newNode;
+        }
+        this.size++;
+    }
+
+    print (){
+        if (!this.size) {
+            return null;
+        }
+        let current = this.head
+        let result = '';
+        
+        while (current) {
+            result += current.data += ' -> ';
+            current = current.next;
+        }
+        result += 'X'
+        return result;
+    }
+
+    removeData (data) {
+        let current = this.head;
+        let previous = null;
+        
+        while (current) {
+            if (current.data === data) {
+                if (!previous) {
+                    this.head = current.next;
+                } else {
+                    previous.next = current.next;
+                };
+                this.size--;
+                return current.data;
+            };
+            previous = current;
+            current = current.next;
+        }
+        return null;
+    }
+
+    removeIndex (index) {
+        let current = this.head;
+        let previous;
+
+        if (index === 0) {
+            this.head = current.next;
+            this.size--;
+            return current.data;
+        }
+        if (index < 0 || index >= this.size || !index) {
+            return null;
+        }
+        for (let i = 0; i < index; i ++) {
+            previous = current;
+            current = current.next;
+        }
+        previous.next = current.next;
+        this.size--;
+        return current.data;
+    }
+
+    isEmpty() {
+        if (this.size === 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    getSize() {
+        return this.size;
+    }
 }
+
+const linkedList = new List();
+console.log(linkedList);
+linkedList.add(21);
+linkedList.add(27);
+linkedList.add(99)
+linkedList.insertAt(14,1)
+linkedList.removeData()
+linkedList.removeIndex()
+console.log(linkedList.print())
+console.log(linkedList.isEmpty())
+console.log(linkedList.getSize())
