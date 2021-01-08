@@ -1,0 +1,26 @@
+[
+    {
+        "id": 0,
+        "title": "task one",
+        "description": "Learn Javascript.",
+        "done": "false"
+    },
+    {
+        "id": 1,
+        "title": "task two",
+        "description": "Start using React.",
+        "done": "false"
+    },
+    {
+        "id": 2,
+        "title": "task three",
+        "description": "Learn back-end development.",
+        "done": "false"
+    },
+    {
+        "id": 3,
+        "title": "task four",
+        "description": "Make a webapp for my mother's business.",
+        "done": "false"
+    }
+]
