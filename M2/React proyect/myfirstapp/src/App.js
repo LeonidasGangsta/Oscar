@@ -3,6 +3,8 @@ import React from 'react';
 import Tasks from './Sample/tasks.json';
 import TaskModule from "./components/TasksContainer";
 import Form from './components/AddTasks';
+import { BrowserRouter as Router, Route, NavLink} from 'react-router-dom'
+
 
 class App extends React.Component {
 
@@ -50,12 +52,20 @@ class App extends React.Component {
       <div className='container'>
         <h1>To Do App</h1>
         <h4>by Oscar Torres</h4>
-        <h1 className='Form'>
-        <Form addTask={this.addTask} />
-        </h1>
-        <div className='Tasks'>
-        <TaskModule tasks={this.state.tasks} delete={this.deleteTask} checkTask={this.checkTask} />
-        </div>
+        <Router>
+          <NavLink to='/'>Home</NavLink>
+          <NavLink to='/add'>Add To Do's</NavLink>
+          <Route path='/Add' render={() => {
+            return <div className='Form'>
+            <Form addTask={this.addTask} />
+            </div>
+          }}/>
+          <Route path='/' render={() => {
+            return <div className='Tasks'>
+            <TaskModule tasks={this.state.tasks} delete={this.deleteTask} checkTask={this.checkTask} />
+            </div>
+          }}/>
+        </Router>
       </div>
     )
   }
