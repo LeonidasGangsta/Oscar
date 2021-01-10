@@ -1,0 +1,15 @@
+$containersBackground: #f8f9fa;
+$titleColor: #212529;
+$subtext: #6c757d;
+
+@mixin button($padding: 5px 10px) {
+    padding: $padding;
+    border: none;
+    background-color: #343a40;
+    color: #dee2e6;
+    font-weight: bold;
+}
+
+@mixin buttonHover {
+    background-color: #212529;
+}

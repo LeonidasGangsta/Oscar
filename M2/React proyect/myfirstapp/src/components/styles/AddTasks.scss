@@ -1,0 +1,45 @@
+@import './variables.scss';
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-color: $containersBackground;
+
+    * {
+        background-color: $containersBackground;
+    }
+
+    h1 {
+        font-size: x-large;
+        margin-top: 0;
+        align-self: center;
+        color: $titleColor;
+    }
+
+    input[type=text] {
+        justify-self: flex-start;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #6c757d;
+        border-radius: 0;
+    }
+
+    input[type=submit] {
+        align-self: center;
+        cursor: pointer;
+        @include button(7px 20px);
+    }
+
+    input[type=submit]:hover {
+        @include buttonHover;
+    }
+
+    textarea {
+        justify-self: flex-start;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #6c757d;
+        border-radius: 0;
+    }
+}

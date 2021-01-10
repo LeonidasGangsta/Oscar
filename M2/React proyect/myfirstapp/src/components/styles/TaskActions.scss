@@ -1,0 +1,24 @@
+@import './variables.scss';
+
+.Actions {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    span {
+        color: $subtext;
+    }
+
+    button {
+        margin: 10px 0;
+        cursor: pointer;
+        @include button;
+    }
+
+    button:hover {
+        @include buttonHover;
+    }
+}

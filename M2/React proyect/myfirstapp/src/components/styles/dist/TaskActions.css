@@ -1,0 +1,23 @@
+.Actions {
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  width: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Actions span {
+  color: #6c757d;
+}
+.Actions button {
+  margin: 10px 0;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  background-color: #343a40;
+  color: #dee2e6;
+  font-weight: bold;
+}
+.Actions button:hover {
+  background-color: #212529;
+}
