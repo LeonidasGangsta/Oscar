@@ -1,0 +1,38 @@
+.weatherCard {
+    border: 1px solid rgb(116, 116, 116);
+    border-radius: 4px;
+    margin: 10px;
+    width: 25vw;
+    padding: 10px;
+    position: relative;
+    min-width: 240px;
+}
+
+.weatherCard:hover {
+    box-shadow: 0 0 4px black;
+}
+
+.temps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.temps ol {
+    list-style-type: none;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgb(241, 78, 78);
+    color: white;
+    border-radius: 4px;
+    border: none;
+}
+
+.closeBtn:hover {
+    box-shadow: 0 0 4px black;
+}
