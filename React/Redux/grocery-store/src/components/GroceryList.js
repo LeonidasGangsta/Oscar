@@ -1,7 +1,14 @@
 import GroceryData from '../data/GroceryItems';
 import './styles/css/GroceryList.css'
 
-export default function ItemsTable({addToCart}) {
+//Redux Imports
+import {useDispatch} from 'react-redux'
+import {addToCart} from '../actions/storeActions'
+
+export default function ItemsTable() {
+
+    const dispatch = useDispatch();
+
     return (
     <table>
         <thead>
@@ -17,7 +24,7 @@ export default function ItemsTable({addToCart}) {
                 <td>{item.name}</td>
                 <td>$ {item.price}</td>
                 <td>
-                    <button onClick={() => addToCart(item)}>
+                    <button onClick={() => dispatch(addToCart(item))}>
                         Add to cart
                     </button>
                 </td>
