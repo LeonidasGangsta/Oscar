@@ -1,0 +1,42 @@
+.cardContainer {
+    margin: auto;
+    width: 353px;
+    display: flex;
+    flex-flow: column wrap;
+    box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.25);
+
+    .cardTitle {
+        margin-left: 3rem;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: #3E3E3E;
+    }
+
+    .cardInteractions {
+        display: flex;
+        justify-content: space-around;
+
+        p {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 14px;
+            color: #727272;
+        }
+    }
+
+    .imgContainer {
+        width: 290px;
+        height: 290px;
+        margin-left: 3rem;
+        border-radius: 15px;
+        overflow: hidden;
+        
+        img {
+            max-height: 100%;
+            min-width: 100%;
+        }
+    }
+}
