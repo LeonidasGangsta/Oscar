@@ -7,14 +7,16 @@ const initialState = [
         img: colores,
         comments: 34,
         old: 4,
-        author: 'Oscar'
+        author: 'Oscar',
+        tags: ['pink', 'fatness', 'love']
     },
     {
         title: 'Posando a mil! cerros de fondo',
         img: cerros,
         comments: 68,
         old: 6,
-        author: 'Aleja'
+        author: 'Aleja',
+        tags: ['cerros', 'photography', 'top-model']
     }
 ]
 
